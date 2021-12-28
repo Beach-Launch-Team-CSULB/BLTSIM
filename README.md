@@ -18,6 +18,12 @@ We will have a main simulink model that will hold the entire simulation.
 We do not want to define blocks in this model. Instead we will want to use
 Simulink Libraries, and only add linked blocks to the main model.
 
+## How to Use
+The main MATLAB files are contained in the /MATLAB directory. Upon opening
+MATLAB in that folder, run 'initMatlab.m' in order to properly initialize your
+session. Currently all it does is add any subfolders on /MATLAB to your active
+path, but I anticipate more will be added to this script in the future.
+
 ## How to Use with Git
 
 The main branch for the sim is called 'main'. Do not work in this branch.
