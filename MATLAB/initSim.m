@@ -4,3 +4,4 @@ clear, clc, close all
 % We use evalin to guarantee everything loads into the base workspace
 evalin('base','loadSimulinkBuses')
 evalin('base','initModelParameters')
+evalin('base','initializeStateVector')

@@ -14,7 +14,7 @@ function [velEci_mps] = velocityCalc(prevStateVector)
 % so we transpose it to use the built in function
 
 % all we do here is rotate our body velocity to inertial space
-dcmEci2Body = quat2dcm(prevStateVector.quatEci2Body');
+dcmEci2Body = dcmFromQuat(prevStateVector.quatEci2Body);
 
 % Transposing the dcm gives us Body2Eci
 velEci_mps = dcmEci2Body' * prevStateVector.velBody_mps;

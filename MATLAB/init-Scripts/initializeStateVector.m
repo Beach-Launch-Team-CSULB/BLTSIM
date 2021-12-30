@@ -8,4 +8,4 @@
 initialStateVector.velBody_mps      =  [0;0;0];
 initialStateVector.bodyRates_rps    =  [0;0;0];
 initialStateVector.quatEci2Body     =  [0;0;0;0];
-initialStateVector.posEci_m         =  [0;0;0];
+initialStateVector.posEci_m         =  [0;0;0];  
