@@ -2,7 +2,7 @@
 
 f1 = figure; % Plot of alt vs. time
 f2 = figure; % Plot of vel vs. time
-f3 = figure; % Velocity in three dimensions
+f3 = figure; % Position in three dimensions
 f4 = figure; % Altitude in three dimensions (?)
 
 
@@ -33,7 +33,7 @@ plot3(x,y,z)
 xlabel('x')
 ylabel('y')
 zlabel('z')
-title('Velocity')
+title('Position')
 
 figure(f4)
 x = 0;
