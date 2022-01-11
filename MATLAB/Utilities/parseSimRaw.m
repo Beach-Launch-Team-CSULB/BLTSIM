@@ -13,10 +13,18 @@ function SimOut = parseSimRaw(SimRaw)
 SimOut.tout = SimRaw.tout;
 
 % state vector
-SimOut.StateVector.velBody_mps = SimRaw.velBody_mps;
+SimOut.StateVector.velBody_mps   = SimRaw.velBody_mps;
 SimOut.StateVector.bodyRates_rps = SimRaw.bodyRates_rps;
-SimOut.StateVector.quatEci2Body = SimRaw.quatEci2Body;
-SimOut.StateVector.posEci_m = SimRaw.posEci_m;
+SimOut.StateVector.quatEci2Body  = SimRaw.quatEci2Body;
+SimOut.StateVector.posEci_m      = SimRaw.posEci_m;
+
+% telemetry
+SimOut.Telemetry.posEci_m      = SimRaw.posEci_m;
+SimOut.Telemetry.velEci_mps    = SimRaw.velEci_mps;
+SimOut.Telemetry.posEcef_m     = SimRaw.posEcef_m;
+SimOut.Telemetry.velEcef_m     = SimRaw.velEcef_mps;
+SimOut.Telemetry.lla_deg       = SimRaw.lla_deg;
+SimOut.Telemetry.bodyRates_rps = SimRaw.bodyRates_rps;
 
 
 
