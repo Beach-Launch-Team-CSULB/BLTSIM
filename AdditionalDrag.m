@@ -1,8 +1,8 @@
 % This function calculates additional drag at angle of attack
 
 % a is the angle of attack 
-% S is an experimentally derived coefficient
-% n is an experimentally derived coefficient
+% S is an experimentally derived coefficient (wind tunnel)
+% n is an experimentally derived coefficient (wind tunnel)
 % Ltr is the total length of the rocket's body
 % Ln is the length of the nose cone
 % db is the max body diameter
