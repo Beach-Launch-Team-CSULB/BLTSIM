@@ -7,4 +7,4 @@ initialProp.Cf = 1.43;
 initialProp.Ve = initialProp.Cstar*initialProp.Cf; %ft/s
 initialProp.De = 3.28; %in
 initialProp.Ae = initialProp.De^2*pi/4; %in^2
-initialProp.mdot = initialProp.Thrust/initialProp.ISP
+initialProp.mdot = initialProp.Thrust/initialProp.ISP; %lb/s
