@@ -1,0 +1,3 @@
+function thrust = thrustCalc(mdot, Ve, Pe, Pa, Ae)
+thrust = mdot*Ve + Ae*(Pe-Pa);
+end
