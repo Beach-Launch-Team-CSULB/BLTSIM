@@ -1,4 +1,4 @@
-function gravityAccel_mps2 = ellipsoidalGravity(posEcef_m, lla_deg)
+function gravityAccelLocal_mps2 = ellipsoidalGravity(posEcef_m, lla_deg)
 % ellipsoidalGravity calculates the gravitational acceleration vector in local UP SOUTH EAST coordinates. This still
 % needs to be rotated to be useful, and multiplied by the mass
 %
@@ -30,7 +30,7 @@ gX = -(mu_m3ps2/R0_m^2)*(1 + j1*p2*(Re_m/R0_m)^2 + ((4*j2*p3)/5)*(Re_m/R0_m)^3 +
 gY = (mu_m3ps2/R0_m^2)*(2*j1*p5*(Re_m/R0_m)^2 - ((3*j2*p6)/5)*(Re_m/R0_m)^3 - ((2*j3*p7)/3)*(Re_m/R0_m)^4);
 gZ = 0;
 
-gravityAccel_mps2 = [gX; gY; gZ];
+gravityAccelLocal_mps2 = [gX; gY; gZ];
 
 
 end
