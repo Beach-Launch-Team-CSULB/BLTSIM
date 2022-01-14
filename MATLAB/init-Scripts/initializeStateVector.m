@@ -27,7 +27,8 @@ initial.posEci_m = initial.posEcef_m;
 initial.velEci_mps = initial.velEcef_mps + cross([0;0;earthRate_rps],initial.posEcef_m);
 
 % Now we need a quaternion from the euler angles:
-initial.quatEci2Body = Euler2Quat(d2r*[initial.Roll_deg; initial.Pitch_deg; initial.Yaw_deg]);
+% Invert it becuase our euler angles are from teh opposite perspective from matlab
+initial.quatEci2Body = quatinv(Euler2Quat(d2r*[initial.Roll_deg; initial.Pitch_deg; initial.Yaw_deg])')';
 
 % Now to do some rotations (remember matlab likes these as horizontal vectors):
 initial.velBody_mps = quatrotate(initial.quatEci2Body', initial.velEci_mps')';
