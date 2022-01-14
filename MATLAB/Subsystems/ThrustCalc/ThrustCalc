@@ -1,3 +1,15 @@
 function thrust = thrustCalc(mdot, Ve, Pe, Pa, Ae)
-thrust = mdot*Ve + Ae*(Pe-Pa);
+% thrust in lbf
+% mdot mass flow rate lb/s
+% Ve exhaust velocity ft/s
+% Pe engine exit pressure Psi
+% Pa atmospheric pressure Pascals
+% Ae engine exit are inches
+
+gravity = 32.174; % ft/s^2
+Pa = Pa/6895; % conversion of Pascals to Psi
+
+thrust = mdot*Ve/gravity + Ae*(Pe-Pa);
+
 end
+
