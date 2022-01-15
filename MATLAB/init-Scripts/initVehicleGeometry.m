@@ -1,7 +1,7 @@
-%%Vehicle Geometry
+%%This script defines the Vehicle Geometry
 %Defined as component by component - ex. Cone, tube for nosecone/body
 
-%Variables-----------------------------------------------------------------
+%% Variables---------------------------------------------------------------
 %Xcm is meant to define distance to Center of Mass of component
 l_cone = []; %height of cone
 rad_cone = []; %radius of cone
@@ -17,7 +17,7 @@ X = [];%side lengths of block
 Y = [];%^
 Z = [];%^
 
-%Cone----------------------------------------------------------------------
+%% Cone--------------------------------------------------------------------
 Xcm_cone = (2*l_cone)/3; %Xcm_cone is distance from cone's point to COM
 %inertia
 
@@ -26,7 +26,7 @@ Iyy_cone = Ixx_cone;
 Izz_cone = (3/10)*(M_cone*rad_cone^2);
 
 
-%Tube----------------------------------------------------------------------
+%% Tube--------------------------------------------------------------------
 Xcm_tube = l_tube/2; %Xcm_tube is halfway along axis of symmetry
 %inertia
 
@@ -34,7 +34,7 @@ Ixx_tube = M_tube/12*(3*(r1_tube^2+r2_tube^2)+ l_tube^2);
 Iyy_tube = Ixx_tube;
 Izz_tube = 0.5*(M_tube*(r1_tube^2+r2_tube^2));
 
-%Block---------------------------------------------------------------------
+%% Block-------------------------------------------------------------------
 %(X,Y,Z) represents block side lengths, center is (x/2,y/2,z/2)
 
 %inertia
