@@ -9,7 +9,7 @@ f4 = figure; % Plot of altitude
 f5 = figure; % Plot of latitude vs. longitude 
 f6 = figure; % Plot of latitude vs. longitude using geoplot
 
-a = [1:64]';
+a = [1:64]'; % This is used for time (seconds)
 
 figure(f1)
 x = a;
@@ -48,9 +48,9 @@ ylabel('Velocity (m/s)')
 title('Velocity vs Time (Z)')
 
 figure(f3)
-x = (SimOut.StateVector.posEci_m(:,1));
-y = (SimOut.StateVector.posEci_m(:,2));
-z = (SimOut.StateVector.posEci_m(:,3));
+x = SimOut.StateVector.posEci_m(:,1);
+y = SimOut.StateVector.posEci_m(:,2);
+z = SimOut.StateVector.posEci_m(:,3);
 plot3(x,y,z)
 
 xlabel('x')
@@ -68,8 +68,8 @@ ylabel('y')
 title('Altitude')
 
 figure(f5)
-x = SimOut.Telemetry.lla_deg(:,2);
-y = SimOut.Telemetry.lla_deg(:,1);
+x = SimOut.Telemetry.lla_deg(:,1);
+y = SimOut.Telemetry.lla_deg(:,2);
 plot(x,y)
 
 xlabel('Longitude')
@@ -77,9 +77,10 @@ ylabel('Latitude')
 title('Latitude vs Longitude')
 
 figure(f6)
-x = SimOut.Telemetry.lla_deg(:,2);
-y = SimOut.Telemetry.lla_deg(:,1);
+x = SimOut.Telemetry.lla_deg(:,1);
+y = SimOut.Telemetry.lla_deg(:,2);
 plot(x,y)
 
 geoplot(x,y,'-*')
-geobasemap colorterrain
+geobasemap satellite
+title('Latitude vs Longitude (FAR)')
