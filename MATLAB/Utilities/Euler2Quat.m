@@ -60,7 +60,7 @@ T = [cos(theta)*cos(psi) -cos(phi)*sin(psi)+sin(phi)*sin(theta)*cos(psi)  sin(ph
  if quat(1) < 0
      quat = -1 * quat;
  end
- 
+
  % I think at this stage I don't want it to be a MATLAB quat, makes it
  % harder to interact with the elements
  
