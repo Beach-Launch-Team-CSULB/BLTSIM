@@ -45,9 +45,11 @@ grid on
 figure(f3)
 x = SimOut.Telemetry.lla_deg(:,1);
 y = SimOut.Telemetry.lla_deg(:,2);
+a = SimOut.Telemetry.lla_deg(1,1);
+b = SimOut.Telemetry.lla_deg(1,2);
 plot(x,y)
 
-geoplot(x,y,'-*')
+geoplot(x,y,'-*',a,b,'r-*')
 geobasemap satellite
 title('Latitude vs Longitude (FAR)')
 grid on
