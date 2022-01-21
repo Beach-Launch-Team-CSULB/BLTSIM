@@ -23,6 +23,8 @@ SimOut = parseSimRaw(SimRaw);
 
 % plot simulation results
 
+plotSimResults
+
 
 
 
