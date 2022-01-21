@@ -51,7 +51,7 @@ plot(x,y)
 
 geoplot(x,y,'-*',a,b,'r-*')
 geobasemap satellite
-title('Latitude vs Longitude (FAR)')
+title('Ground Track')
 grid on
 
 
