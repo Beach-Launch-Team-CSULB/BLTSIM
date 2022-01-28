@@ -22,7 +22,7 @@ elseif altitude < 91000
     airTemp = 186.8673;
 elseif  altitude < 110000
     airTemp = 263.1905 - 76.3232*sqrt(1 - ((altitude/1000 - 91) / - 19.9429)^2);
-elseif altitude < 120000
+elseif altitude <= 120000
     airTemp = 240 + 12*(altitude/1000-110);
 end
 end
