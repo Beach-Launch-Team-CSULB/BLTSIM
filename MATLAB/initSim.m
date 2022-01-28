@@ -4,3 +4,6 @@
 evalin('base','loadSimulinkBuses')
 evalin('base','initModelParameters')
 evalin('base','initializeStateVector')
+
+% load lookup tables
+load(fullfile('LookupTables','AtmosphericModel','atmLookupTables.mat'));
