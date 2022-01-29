@@ -7,6 +7,6 @@
 % Ln is the length of the nose cone
 % db is the max body diameter
 
-function DaAoA = BodyDragAoA(Ltr,Ln,db,a,S,n)
-DaAoA = ((2 .* S .* (a .^ 2)) + (((3.6 .* n) .* ((1.36 .* Ltr) - (0.55 .* Ln)))/(pi .* db)) .* (a .^ 3));
+function BDaAoA = BodyDragAoA(Ltr,Ln,db,a,S,n)
+BDaAoA = ((2 .* S .* (a .^ 2)) + (((3.6 .* n) .* ((1.36 .* Ltr) - (0.55 .* Ln)))/(pi .* db)) .* (a .^ 3));
 end
