@@ -5,15 +5,14 @@ clear, clc, close all
 % model name
 mdl = 'BLTSIM_MASTER_MODEL';
 
-% run initializers and loadscripts
-initializeStateVector
-initModelParameters
+% run initializer
 initSim
 
-loadSimulinkBuses
-
 % set simulation end time (seconds):
-Simulation.StopTime = 30;
+Simulation.StopTime = 60;
+
+% load model into memory
+load_system(mdl)
 
 % run the simulation
 SimRaw = sim(mdl);
