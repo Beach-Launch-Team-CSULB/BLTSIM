@@ -61,19 +61,19 @@ y1 = SimOut.StateVector.bodyRates_rps(:,1);
 subplot(3,1,1)
 plot(x,y1)
 xlabel('time (s)')
-ylabel('something 1')
+ylabel('X rotation [rad/s]')
 grid on
 y2 = SimOut.StateVector.bodyRates_rps(:,2);
 subplot(3,1,2)
 plot(x,y2)
 xlabel('time (s)')
-ylabel('something 2')
+ylabel('Y rotation [rad/s]')
 grid on
 y3 = SimOut.StateVector.bodyRates_rps(:,3);
 subplot(3,1,3)
 plot(x,y3)
 xlabel('time (s)')
-ylabel('something 3')
+ylabel('Z rotation [rad/s]')
 grid on
 
 sgtitle('Body Rates')
@@ -82,7 +82,7 @@ grid on
 
 figure(f5)
 x = SimOut.tout;
-[roll, pitch, yaw] = quat2angle(SimOut.StateVector.quatEci2Body);
+[yaw, pitch, roll] = quat2angle(SimOut.StateVector.quatEci2Body);
 y1 = roll;
 subplot(3,1,1)
 plot(x,y1)
@@ -104,3 +104,5 @@ grid on
 
 sgtitle('Attitude')
 grid on
+
+clear x y y1 y2 y3 yaw pitch roll a b f1 f2 f3 f4 f5

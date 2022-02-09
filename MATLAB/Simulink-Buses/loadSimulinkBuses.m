@@ -12,4 +12,4 @@ for k = 1:length(busFiles)
     % Matlab workspaces are very useful, but often confusing.
     evalin('base',busFiles(k).name(1:end-2));
 end
-clear k
+clear k busFiles
