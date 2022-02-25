@@ -5,7 +5,7 @@ function airPressure = AirPressure(altitude)
  %altitude in m
  %Pressure in Pa
 
- altitude = altitude/1000; %converts altitude to km
+altitude = altitude/1000; %converts altitude to km
 if altitude < 11 % 0-11 km
     airPressure = 101325.0 * (288.15 / (288.15 - 6.5 * altitude))^(34.1632 / -6.5);
 elseif altitude < 20 % 11-20 km
@@ -26,7 +26,7 @@ elseif altitude < 100
     airPressure = exp(3.304895e-5*altitude^3 + -0.009062730*altitude^2 + 0.6516698*altitude + -11.03037);
 elseif altitude < 110
     airPressure = exp(-6.693926e-5*altitude^3 + -0.01945388*altitude^2 + 1.719080*altitude + -47.75030);
-elseif altitude <= 120
+else
     airPressure = exp(-6.539316e-5*altitude^3 + 0.02485568*altitude^2 + -3.223620*altitude + 135.9355);
 
 end
